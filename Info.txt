@@ -1,0 +1,10 @@
+//    How to use GSON -> for converting JSON to object and object to JSON
+//    Gson gson = new Gson();
+//    String json = gson.toJson(classObject);
+//    ClassName var_name = gson.(json_string, ClassName.class)
+
+------------------------------------------------------------------------------------
+
+Added Dependency for GSON
+
+--------------------------------------------------------------------------------------

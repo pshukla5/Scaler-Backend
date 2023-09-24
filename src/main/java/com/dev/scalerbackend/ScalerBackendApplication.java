@@ -8,6 +8,8 @@ public class ScalerBackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ScalerBackendApplication.class, args);
+
+        System.out.println("\nApplication Started\n");
     }
 
 }
