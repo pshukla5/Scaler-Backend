@@ -1,0 +1,12 @@
+Create two classes Bot(child) and Player(parent) such that there will be two tables
+
+1st - id, name, age -> for Player
+2nd - player_id, rank -> for Bot
+
+Player - id, name, age
+Bot - rank
+
+
+Soln:-
+
+We will use Inheritance type -> JOIN.
