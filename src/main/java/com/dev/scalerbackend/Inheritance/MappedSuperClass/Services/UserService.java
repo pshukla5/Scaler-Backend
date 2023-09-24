@@ -1,10 +1,10 @@
 package com.dev.scalerbackend.Inheritance.MappedSuperClass.Services;
 
 
-import com.dev.scalerbackend.Inheritance.MappedSuperClass.Models.User;
-import com.dev.scalerbackend.Inheritance.MappedSuperClass.Repositories.MentorRepo;
 import com.dev.scalerbackend.Inheritance.MappedSuperClass.Repositories.StudentRepo;
 import com.dev.scalerbackend.Inheritance.MappedSuperClass.Repositories.TARepo;
+import com.dev.scalerbackend.Inheritance.MappedSuperClass.Models.User;
+import com.dev.scalerbackend.Inheritance.MappedSuperClass.Repositories.MentorRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

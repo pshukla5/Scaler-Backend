@@ -1,13 +1,13 @@
-package com.dev.scalerbackend.Inheritance.MappedSuperClass.Services;
+package com.dev.scalerbackend.Inheritance.TablePerClass.Services;
 
-import com.dev.scalerbackend.Inheritance.MappedSuperClass.Repositories.MentorRepo;
-import com.dev.scalerbackend.Inheritance.MappedSuperClass.Models.Mentor;
+import com.dev.scalerbackend.Inheritance.TablePerClass.Models.Mentor;
+import com.dev.scalerbackend.Inheritance.TablePerClass.Repositories.MentorRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @AllArgsConstructor
-@Service("ms_mentorService")
+@Service("tpc_mentorService")
 public class MentorService {
 
     MentorRepo mentorRepo;

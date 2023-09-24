@@ -1,7 +1,7 @@
 package com.dev.scalerbackend.Inheritance.MappedSuperClass.Services;
 
-import com.dev.scalerbackend.Inheritance.MappedSuperClass.Models.TA;
 import com.dev.scalerbackend.Inheritance.MappedSuperClass.Repositories.TARepo;
+import com.dev.scalerbackend.Inheritance.MappedSuperClass.Models.TA;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
