@@ -1,14 +1,14 @@
-package com.dev.scalerbackend.Inheritance.JoinedTable.Controllers;
+package com.dev.scalerbackend.Inheritance.SingleTable.Controllers;
 
 
-import com.dev.scalerbackend.Inheritance.JoinedTable.Models.Mentor;
-import com.dev.scalerbackend.Inheritance.JoinedTable.Models.Student;
-import com.dev.scalerbackend.Inheritance.JoinedTable.Models.TA;
-import com.dev.scalerbackend.Inheritance.JoinedTable.Models.User;
-import com.dev.scalerbackend.Inheritance.JoinedTable.Services.MentorService;
-import com.dev.scalerbackend.Inheritance.JoinedTable.Services.StudentService;
-import com.dev.scalerbackend.Inheritance.JoinedTable.Services.TAService;
-import com.dev.scalerbackend.Inheritance.JoinedTable.Services.UserService;
+import com.dev.scalerbackend.Inheritance.SingleTable.Models.Mentor;
+import com.dev.scalerbackend.Inheritance.SingleTable.Models.Student;
+import com.dev.scalerbackend.Inheritance.SingleTable.Models.TA;
+import com.dev.scalerbackend.Inheritance.SingleTable.Models.User;
+import com.dev.scalerbackend.Inheritance.SingleTable.Services.MentorService;
+import com.dev.scalerbackend.Inheritance.SingleTable.Services.StudentService;
+import com.dev.scalerbackend.Inheritance.SingleTable.Services.TAService;
+import com.dev.scalerbackend.Inheritance.SingleTable.Services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @AllArgsConstructor
-//@RestController
+@RestController
 public class BatchController {
     UserService userService;
     MentorService mentorService;
