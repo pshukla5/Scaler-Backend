@@ -1,0 +1,30 @@
+Product Request Dto
+
+{
+    "title" : "IPhone 14 Pro Max",
+    "price" : {
+        "currency": "INR",
+        "price": 120000.84
+    },
+    "description" : "Earlier Dream Phone",
+    "image" : "https://image.com/",
+    "category_name" : "Phone"
+}
+
+Product Response Dto
+
+{
+    "id": "bc946003-97e3-4046-90b3-3eb0e1ac1cb5",
+    "title": "IPhone 13 Mini",
+    "price": {
+        "id": "9c0042e0-e0a1-42b9-ae7a-a22a25329ba3",
+        "currency": "INR",
+        "price": 60000.65
+    },
+    "description": "Best Mini Phone",
+    "image": "https://image.com/",
+    "categoryResponseDto": {
+        "uuid": "afbbf2bf-04a0-4c27-9547-fcb6402174ec",
+        "name": "Phone"
+    }
+}

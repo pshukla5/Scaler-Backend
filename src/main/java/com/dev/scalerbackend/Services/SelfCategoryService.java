@@ -33,4 +33,12 @@ public class SelfCategoryService implements CategoryService{
         return categoryRepo.findById(UUID.fromString(uuid)).get().getProducts();
     }
 
+    @Override
+    public Category addCategory(Category category) {
+
+        return categoryRepo.save(category);
+    }
+
+
+
 }

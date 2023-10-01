@@ -1,8 +1,6 @@
 package com.dev.scalerbackend.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +14,8 @@ import java.util.List;
 @AllArgsConstructor
 @Entity(name = "Catgories")
 public class Category extends BaseModel {
+
+    @Column(unique = true)
     private String name;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)

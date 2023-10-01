@@ -1,9 +1,16 @@
 package com.dev.scalerbackend.Dtos;
 
+
+import com.dev.scalerbackend.Models.Price;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class ProductRequestDto {
     String title;
-    double price;
+    Price price;
     String description;
     String image;
-    String category;
+    String category_name;
 }
