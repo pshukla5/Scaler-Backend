@@ -53,10 +53,10 @@
             <version>2.10.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+        <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-mysql -->
         <dependency>
             <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
+            <artifactId>flyway-mysql</artifactId>
             <version>9.22.2</version>
         </dependency>
 
