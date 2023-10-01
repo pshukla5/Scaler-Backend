@@ -2,9 +2,12 @@ package com.dev.scalerbackend.Controllers;
 
 import com.dev.scalerbackend.Dtos.ProductRequestDto;
 import com.dev.scalerbackend.Dtos.ProductResponseDto;
+import com.dev.scalerbackend.Services.CategoryService;
 import com.dev.scalerbackend.Services.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
 
     private ProductService productService;
+    private CategoryService categoryService;
 
     @GetMapping("/demo")
     public String check(){
@@ -31,6 +35,11 @@ public class ProductController {
     public ProductResponseDto addProduct(@RequestBody ProductRequestDto productRequestDto){
 
         return productService.addProduct(productRequestDto);
+    }
+
+    @GetMapping("/categories")
+    public List<String> getAllCategories(){
+        return categoryService.getAllCategory();
     }
 
 
