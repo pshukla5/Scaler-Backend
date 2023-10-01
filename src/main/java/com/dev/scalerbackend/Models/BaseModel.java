@@ -10,6 +10,8 @@ import org.hibernate.annotations.UuidGenerator;
 import java.util.UUID;
 
 @MappedSuperclass
+@Getter
+@Setter
 public class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

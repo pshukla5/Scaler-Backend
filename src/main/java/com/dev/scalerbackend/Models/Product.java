@@ -3,16 +3,13 @@ package com.dev.scalerbackend.Models;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Fetch;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-public class Product extends BaseModel{
+@AllArgsConstructor
+public class Product extends BaseModel {
 
     private String title;
     private String description;
@@ -24,4 +21,12 @@ public class Product extends BaseModel{
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private Price price;
 
+    public Product() {
+
+        this.title = "Iphone 15 Pro Max";
+        this.description = "Everyone's dream phone";
+        this.image = "https://fakeimage.com";
+        this.category = new Category();
+        this.price = new Price();
+    }
 }

@@ -1,0 +1,13 @@
+{
+  "title": "Iphone 15 Pro Max",
+  "description": "Everyone's dream phone",
+  "image": "https://fakeimage.com",
+  "category": {
+    "name": "Phone",
+    "productList": null
+  },
+  "price": {
+    "currency": "INR",
+    "price": 120000.84
+  }
+}
