@@ -14,10 +14,10 @@ Product Request Dto
 Product Response Dto
 
 {
-    "id": "bc946003-97e3-4046-90b3-3eb0e1ac1cb5",
+    "id": "25106243-6d0a-4555-97fb-54085dec588c",
     "title": "IPhone 13 Mini",
     "price": {
-        "id": "9c0042e0-e0a1-42b9-ae7a-a22a25329ba3",
+        "id": "67ba9103-b348-4564-ab21-cf8a0aed23ef",
         "currency": "INR",
         "price": 60000.65
     },
@@ -28,3 +28,54 @@ Product Response Dto
         "name": "Phone"
     }
 }
+
+
+List of productResponseDto
+
+[
+    {
+        "id": "25106243-6d0a-4555-97fb-54085dec588c",
+        "title": "IPhone 13 Mini",
+        "price": {
+            "id": "67ba9103-b348-4564-ab21-cf8a0aed23ef",
+            "currency": "INR",
+            "price": 60000.65
+        },
+        "description": "Best Mini Phone",
+        "image": "https://image.com/",
+        "categoryResponseDto": {
+            "uuid": "afbbf2bf-04a0-4c27-9547-fcb6402174ec",
+            "name": "Phone"
+        }
+    },
+    {
+        "id": "89728cfa-41a3-4fb6-8ecf-38139b6469e6",
+        "title": "IPhone 14 Pro Max",
+        "price": {
+            "id": "60feb4ca-c409-488c-a49e-96c4ed117fa8",
+            "currency": "INR",
+            "price": 120000.84
+        },
+        "description": "Earlier Dream Phone",
+        "image": "https://image.com/",
+        "categoryResponseDto": {
+            "uuid": "afbbf2bf-04a0-4c27-9547-fcb6402174ec",
+            "name": "Phone"
+        }
+    },
+    {
+        "id": "d09a8f55-9744-445a-b3f4-8fbed5f6dd35",
+        "title": "IPhone 15 Pro Max",
+        "price": {
+            "id": "bbc2a482-0273-41da-b8b1-97c2bb8cea1c",
+            "currency": "INR",
+            "price": 120000.84
+        },
+        "description": "Dream Phone",
+        "image": "https://image.com/",
+        "categoryResponseDto": {
+            "uuid": "afbbf2bf-04a0-4c27-9547-fcb6402174ec",
+            "name": "Phone"
+        }
+    }
+]
