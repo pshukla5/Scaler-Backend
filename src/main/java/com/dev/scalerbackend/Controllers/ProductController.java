@@ -42,6 +42,12 @@ public class ProductController {
         return productService.getAllProducts();
     }
 
+    @GetMapping("/{uuid}")
+    public ProductResponseDto getProductById (@PathVariable String uuid) {
+
+        return productService.getProductById(uuid);
+    }
+
 
 
 }

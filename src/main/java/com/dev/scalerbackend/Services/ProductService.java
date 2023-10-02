@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public interface ProductService {
     public List<ProductResponseDto> getAllProducts();
-    public Product getProductById(String uuid);
+    public ProductResponseDto getProductById(String uuid);
     public ProductResponseDto addProduct(ProductRequestDto productRequestDto);
     public Product updateProduct(Product product);
     public String deleteProductById(String uuid);
