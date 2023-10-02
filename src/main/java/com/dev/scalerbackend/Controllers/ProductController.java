@@ -16,7 +16,6 @@ import java.util.List;
 public class ProductController {
 
     private ProductService productService;
-    private CategoryService categoryService;
 
     @GetMapping("/demo")
     public String check(){
@@ -30,16 +29,11 @@ public class ProductController {
         return productService.deleteProductById(uuid);
     }
 
-    @PutMapping("/")
+    @PutMapping("")
 
     public ProductResponseDto addProduct(@RequestBody ProductRequestDto productRequestDto){
 
         return productService.addProduct(productRequestDto);
-    }
-
-    @GetMapping("/categories")
-    public List<String> getAllCategories(){
-        return categoryService.getAllCategory();
     }
 
 
