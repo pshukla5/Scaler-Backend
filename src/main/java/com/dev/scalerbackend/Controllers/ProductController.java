@@ -16,12 +16,6 @@ public class ProductController {
 
     private ProductService productService;
 
-    @GetMapping("/demo")
-    public String check(){
-
-        return "Success";
-    }
-
     @DeleteMapping("/{uuid}")
     public String deleteProductById(@PathVariable String uuid){
 

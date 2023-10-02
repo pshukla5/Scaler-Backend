@@ -108,5 +108,21 @@ public class SelfProductService implements ProductService{
         return "Product with id " + uuid + " deleted";
     }
 
+    @Override
+    public List<ProductResponseDto> getPrductByCategoryId(String uuid) {
+
+        List<Product> products = productRepo.
+                findAllByCategory_Id(UUID.fromString(uuid));
+
+        List<ProductResponseDto> productResponseDtos = new ArrayList<>();
+
+        products.forEach(product -> productResponseDtos.add(
+                productToProductResponseDto(product)
+        ));
+
+
+        return productResponseDtos;
+    }
+
 
 }

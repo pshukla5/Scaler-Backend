@@ -1,0 +1,7 @@
+/products  - GET  -- getAllProducts
+/products  - POST -- addNewProduct
+/products/{uuid} - GET  --- getProductById
+/products/{uuid} - PUT  -- updateProductById
+/products/{uuid} - DELETE  -- deleteProductById
+/categories - GET --- getAllCategories
+/categories/{uuid} - GET --- getAllproductsbyCategoryId

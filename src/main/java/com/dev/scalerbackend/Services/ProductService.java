@@ -14,4 +14,6 @@ public interface ProductService {
     public ProductResponseDto addProduct(ProductRequestDto productRequestDto);
     public ProductResponseDto updateProductById(ProductRequestDto productRequestDto, String uuid);
     public String deleteProductById(String uuid);
+
+    public List<ProductResponseDto> getPrductByCategoryId(String uuid);
 }

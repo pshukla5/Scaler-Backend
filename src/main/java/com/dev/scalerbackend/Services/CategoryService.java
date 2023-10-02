@@ -9,7 +9,6 @@ import java.util.List;
 public interface CategoryService {
 
     public List<String> getAllCategory();
-    public List<Product> getProductByCategory(String uuid);
 
     public Category addCategory(Category category);
 
