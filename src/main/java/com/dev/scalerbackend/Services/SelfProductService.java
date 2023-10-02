@@ -10,6 +10,7 @@ import com.dev.scalerbackend.Repositories.ProductRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -60,8 +61,16 @@ public class SelfProductService implements ProductService{
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return productRepo.findAll();
+    public List<ProductResponseDto> getAllProducts() {
+
+        List<Product> products = productRepo.findAll();
+
+        List<ProductResponseDto> productResponseDtos = new ArrayList<>();
+
+        products.forEach(product -> productResponseDtos
+                .add(productToProductResponseDto(product)));
+
+        return productResponseDtos;
     }
 
     @Override
@@ -89,4 +98,6 @@ public class SelfProductService implements ProductService{
         productRepo.deleteById(UUID.fromString(uuid));
         return "Product with id " + uuid + " deleted";
     }
+
+
 }

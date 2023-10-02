@@ -2,7 +2,6 @@ package com.dev.scalerbackend.Controllers;
 
 import com.dev.scalerbackend.Dtos.ProductRequestDto;
 import com.dev.scalerbackend.Dtos.ProductResponseDto;
-import com.dev.scalerbackend.Services.CategoryService;
 import com.dev.scalerbackend.Services.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +33,13 @@ public class ProductController {
     public ProductResponseDto addProduct(@RequestBody ProductRequestDto productRequestDto){
 
         return productService.addProduct(productRequestDto);
+    }
+
+    @GetMapping("")
+
+    public List<ProductResponseDto> getAllProducts(){
+
+        return productService.getAllProducts();
     }
 
 
