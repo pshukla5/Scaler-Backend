@@ -28,7 +28,7 @@ public class ProductController {
         return productService.deleteProductById(uuid);
     }
 
-    @PutMapping("")
+    @PostMapping("")
 
     public ProductResponseDto addProduct(@RequestBody ProductRequestDto productRequestDto){
 
@@ -46,6 +46,14 @@ public class ProductController {
     public ProductResponseDto getProductById (@PathVariable String uuid) {
 
         return productService.getProductById(uuid);
+    }
+
+    @PutMapping("/{uuid}")
+    public ProductResponseDto updateProductById(
+            @PathVariable String uuid,
+            @RequestBody ProductRequestDto productRequestDto){
+
+        return productService.updateProductById(productRequestDto, uuid);
     }
 
 

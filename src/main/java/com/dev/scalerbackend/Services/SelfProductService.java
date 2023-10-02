@@ -92,9 +92,14 @@ public class SelfProductService implements ProductService{
     }
 
     @Override
-    public Product updateProduct(Product product) {
+    public ProductResponseDto updateProductById(
+            ProductRequestDto productRequestDto, String uuid) {
 
-        return null;
+        productRepo.getReferenceById(UUID.fromString(uuid));
+        Product product = productRequestDtoToProduct(productRequestDto);
+        product.setId(UUID.fromString(uuid));
+
+        return productToProductResponseDto(productRepo.save(product));
     }
 
     @Override
