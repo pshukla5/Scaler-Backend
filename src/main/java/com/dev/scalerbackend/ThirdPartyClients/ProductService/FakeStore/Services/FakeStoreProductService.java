@@ -76,18 +76,52 @@ public class FakeStoreProductService implements ProductService {
                 restTemplate.getForEntity(specificProductRequestUrl,
                         FakeStoreProductResponseDto.class, id);
 
+        if(response.getBody() == null) return null;
+
         return convertFakeStoreResponseDtoToGenericResponseDto(
                 response.getBody());
     }
 
     @Override
     public List<String> getAllCategories() {
-        return null;
+
+        RestTemplate restTemplate = restTemplateBuilder.build();
+
+
+        ResponseEntity<String[]> response = restTemplate.getForEntity(
+                productRequestBaseUrl + "/categories",
+                String[].class
+        );
+
+        if(response.getBody() == null) return null;
+
+        return Arrays.asList(response.getBody());
     }
 
     @Override
     public List<GenericProductResponseDto> getInCategory(String category) {
-        return null;
+
+        RestTemplate restTemplate = restTemplateBuilder.build();
+
+        ResponseEntity<FakeStoreProductResponseDto[]> response = restTemplate.getForEntity(
+                productRequestBaseUrl + "/category/{category}",
+                FakeStoreProductResponseDto[].class,
+                category
+        );
+
+        if(response.getBody() == null) return null;
+
+        List<FakeStoreProductResponseDto> fakeStoreProductResponseDtos =
+                Arrays.asList(response.getBody());
+
+        List<GenericProductResponseDto> genericProductResponseDtos = new ArrayList<>();
+
+        fakeStoreProductResponseDtos.forEach(fakeStoreProductResponseDto ->
+                genericProductResponseDtos.add(
+                        convertFakeStoreResponseDtoToGenericResponseDto(
+                                fakeStoreProductResponseDto)
+                ));
+        return genericProductResponseDtos;
     }
 
     @Override

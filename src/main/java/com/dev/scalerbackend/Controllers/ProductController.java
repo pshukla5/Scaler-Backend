@@ -28,12 +28,18 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
+    @GetMapping("/products/categories")
     public List<String> getAllCategories() {
-        return null;
+        return productService.getAllCategories();
     }
 
-    public List<GenericProductResponseDto> getInCategory(String category) {
-        return null;
+    @GetMapping("/products/category/{category}")
+    public List<GenericProductResponseDto> getInCategory(@PathVariable String category) {
+
+//        System.out.println(category);
+
+
+        return productService.getInCategory(category);
     }
 
     public GenericProductResponseDto addProduct(
